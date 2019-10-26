@@ -1,6 +1,7 @@
 import React from 'react'
 import { View, Text, StyleSheet, Button, Image } from 'react-native'
 import colors from '../constants/colors'
+import TitleText from '../components/TitleText'
 
 type GameOverScreenProps = {
   numberOfRounds: number
@@ -15,7 +16,7 @@ const GameOverScreen = ({
 }: GameOverScreenProps) => {
   return (
     <View style={styles.screen}>
-      <Text>Game Over</Text>
+      <TitleText style={styles.title}>Game is Over!</TitleText>
       <View style={styles.imageContainer}>
         <Image
           style={styles.image}
@@ -36,6 +37,9 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
+  },
+  title: {
+    fontSize: 20,
   },
   restartButton: {
     marginVertical: 10,
