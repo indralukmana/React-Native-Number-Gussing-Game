@@ -25,7 +25,9 @@ export default function App() {
       {userNumber !== 0 && guessRounds === 0 && (
         <GameScreen userChoice={userNumber} onGameOver={gameOverHandler} />
       )}
-      {guessRounds !== 0 && <GameOverScreen />}
+      {guessRounds !== 0 && (
+        <GameOverScreen numberOfRounds={guessRounds} userNumber={userNumber} />
+      )}
     </View>
   )
 }
